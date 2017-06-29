@@ -1,0 +1,31 @@
+name: "jboss-processserver-6/processserver63-openshift"
+version: "1.5"
+description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.3."
+from: "jboss-kieserver-6/kieserver63-openshift:1.5"
+user: 185
+labels:
+    - name: "io.k8s.description"
+      value: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.3."
+    - name: "io.k8s.display-name"
+      value: "JBoss BPMS Intelligent Process Server 6.3"
+    - name: "io.openshift.tags"
+      value: "builder,processserver,processserver6"
+envs:
+    - name: "KIE_SERVER_BPM_UI_DISABLED"
+      value: "true"
+      description: "The BPM UI capability is disabled in this image."
+    - name: "KIE_SERVER_BRP_DISABLED"
+      value: "true"
+      description: "The BRP capability is disabled in this image."
+    - name: "JBOSS_PRODUCT"
+      value: "processserver"
+    - name: "JBOSS_PROCESSSERVER_VERSION"
+      value: "6.3.4.GA"
+    - name: "PRODUCT_VERSION"
+      value: "6.3.4.GA"
+dogen:
+    version: 2.1.0
+    plugins:
+        dist_git:
+            repo: jboss-processserver-6-docker
+            branch: ce-1.5-openshift-processserver-6.3-jdk-8-rhel-7
