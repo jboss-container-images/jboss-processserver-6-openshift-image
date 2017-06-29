@@ -1,7 +1,7 @@
 name: "jboss-processserver-6/processserver64-openshift"
 version: "1.1"
 description: "Red Hat JBoss BPMS Intelligent Process Server 6.4 OpenShift container image"
-from: "jboss-kieserver-6/kieserver64-openshift:1.5"
+from: "jboss-kieserver-6/kieserver64-openshift:1.1"
 user: 185
 labels:
     - name: "io.k8s.description"
