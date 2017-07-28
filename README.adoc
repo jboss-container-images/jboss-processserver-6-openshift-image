@@ -1,0 +1,7 @@
+# Red Hat JBoss BPMS Intelligent Process Server 6.4 OpenShift container image
+
+NOTE: Extends link:https://github.com/jboss-container-images/jboss-kieserver-6-openshift-image[jboss-kieserver-6-openshift-image]
+
+# License
+
+See link:LICENSE[LICENSE] file.
