@@ -24,7 +24,7 @@ envs:
     - name: "PRODUCT_VERSION"
       value: "6.3.4.GA"
 dogen:
-    version: 2.4.0
+    version: 2.4.3
     plugins:
         dist_git:
             repo: jboss-processserver-6-docker
