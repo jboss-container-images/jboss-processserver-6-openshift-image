@@ -1,8 +1,9 @@
+schema_version: 1
+
 name: "jboss-processserver-6/processserver63-openshift"
 version: "1.5"
 description: "Red Hat JBoss BPMS Intelligent Process Server 6.3 OpenShift container image"
 from: "jboss-kieserver-6/kieserver63-openshift:1.5"
-user: 185
 labels:
     - name: "io.k8s.description"
       value: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.3."
@@ -23,9 +24,9 @@ envs:
       value: "6.3.4.GA"
     - name: "PRODUCT_VERSION"
       value: "6.3.4.GA"
-dogen:
-    version: 2.4.3
-    plugins:
-        dist_git:
-            repo: jboss-processserver-6-docker
+run:
+      user: 185
+osbs:
+      repository:
+            name: jboss-processserver-6-docker
             branch: ce-1.5-openshift-processserver-6.3-jdk-8-rhel-7
