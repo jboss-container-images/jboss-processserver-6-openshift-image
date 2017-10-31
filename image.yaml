@@ -20,9 +20,9 @@ envs:
     - name: "JBOSS_PRODUCT"
       value: "processserver"
     - name: "JBOSS_PROCESSSERVER_VERSION"
-      value: "6.4.5.GA"
+      value: "6.4.6.GA"
     - name: "PRODUCT_VERSION"
-      value: "6.4.5.GA"
+      value: "6.4.6.GA"
 dogen:
     version: 2.4.4
     plugins:
