@@ -1,8 +1,9 @@
+schema_version: 1
+
 name: "jboss-processserver-6/processserver64-openshift"
-version: "1.1"
-from: "jboss-kieserver-6/kieserver64-openshift:1.1"
+version: "1.5"
 description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
-user: 185
+from: "jboss-kieserver-6/kieserver64-openshift:1.1"
 labels:
     - name: "io.k8s.description"
       value: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
@@ -23,9 +24,9 @@ envs:
       value: "6.4.5.GA"
     - name: "PRODUCT_VERSION"
       value: "6.4.5.GA"
-dogen:
-    version: 2.4.4
-    plugins:
-        dist_git:
-            repo: jboss-processserver-6-docker
+run:
+      user: 185
+osbs:
+      repository:
+            name: jboss-processserver-6-docker
             branch: ce-1.1-openshift-processserver-6.4-jdk-8-rhel-7
