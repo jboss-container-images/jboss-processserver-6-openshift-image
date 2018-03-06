@@ -5,6 +5,8 @@ version: "1.3"
 description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
 from: "jboss-kieserver-6/kieserver64-openshift:1.3"
 labels:
+    - name: "com.redhat.component"
+      value: "jboss-processserver-6-processserver64-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
     - name: "io.k8s.display-name"
@@ -28,5 +30,5 @@ run:
       user: 185
 osbs:
       repository:
-            name: jboss-processserver-6-docker
+            name: containers/jboss-processserver-6
             branch: jb-processserver-6.4-openshift-rhel-7
