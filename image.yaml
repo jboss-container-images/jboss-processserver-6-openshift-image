@@ -1,10 +1,12 @@
 schema_version: 1
 
-name: "jboss-processserver-6/processserver64-openshift"
+name: "jboss-processserver-6/processserver64-eap70-openshift"
 version: "1.3"
-description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
-from: "jboss-kieserver-6/kieserver64-openshift:1.3"
+description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4 on top of JBoss EAP 7.0.x."
+from: "jboss-kieserver-6/kieserver64-eap70-openshift:1.3"
 labels:
+    - name: "com.redhat.component"
+      value: "jboss-processserver-6-processserver64-openshift-container"
     - name: "io.k8s.description"
       value: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
     - name: "io.k8s.display-name"
@@ -21,12 +23,12 @@ envs:
     - name: "JBOSS_PRODUCT"
       value: "processserver"
     - name: "JBOSS_PROCESSSERVER_VERSION"
-      value: "6.4.7.GA"
+      value: "6.4.9.GA"
     - name: "PRODUCT_VERSION"
-      value: "6.4.7.GA"
+      value: "6.4.9.GA"
 run:
       user: 185
 osbs:
       repository:
-            name: jboss-processserver-6-docker
+            name: containers/jboss-processserver-6
             branch: ce-1.3-openshift-processserver-6.4-jdk-8-rhel-7
