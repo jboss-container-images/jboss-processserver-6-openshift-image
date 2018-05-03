@@ -3,7 +3,7 @@ schema_version: 1
 name: "jboss-processserver-6/processserver64-openshift"
 version: "1.3"
 description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
-from: "jboss-kieserver-6/kieserver64-openshift:1.3"
+from: "jboss-kieserver-6/kieserver64-openshift:1.4"
 labels:
     - name: "com.redhat.component"
       value: "jboss-processserver-6-processserver64-openshift-container"
