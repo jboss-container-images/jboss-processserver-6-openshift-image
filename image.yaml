@@ -23,9 +23,9 @@ envs:
     - name: "JBOSS_PRODUCT"
       value: "processserver"
     - name: "JBOSS_PROCESSSERVER_VERSION"
-      value: "6.4.10.GA"
+      value: "6.4.11.GA"
     - name: "PRODUCT_VERSION"
-      value: "6.4.10.GA"
+      value: "6.4.11.GA"
 run:
       user: 185
 osbs:
