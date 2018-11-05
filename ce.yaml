@@ -1,0 +1,5 @@
+builds:
+  # Product builds
+  - name: "jboss-processserver-6-openshift-dev"
+    descriptor: "image.yaml"
+    product: true
