@@ -5,29 +5,30 @@
 ////
 
 = Application Templates
-This project contains OpenShift v3 application templates which support applications based on JBoss Middleware products.
-Source can be found https://github.com/jboss-container-images/jboss-processserver-6-openshift-image/tree/master[here].
+
+This project contains OpenShift v3 application templates which support the Red Hat JBoss BRMS 6.4 Intelligent Process Server.
+Source can be found https://github.com/jboss-container-images/jboss-processserver-6-openshift-image/tree/6.4.x[here].
 
 :icons: font
 :toc: macro
 
 toc::[levels=1]
 
-== Red Hat JBoss BPM Suite intelligent process server
-
-* link:./processserver/processserver64-amq-mysql-persistent-s2i.adoc[processserver64-amq-mysql-persistent-s2i]
-* link:./processserver/processserver64-amq-mysql-s2i.adoc[processserver64-amq-mysql-s2i]
-* link:./processserver/processserver64-amq-postgresql-persistent-s2i.adoc[processserver64-amq-postgresql-persistent-s2i]
-* link:./processserver/processserver64-amq-postgresql-s2i.adoc[processserver64-amq-postgresql-s2i]
-* link:./processserver/processserver64-basic-s2i.adoc[processserver64-basic-s2i]
-* link:./processserver/processserver64-mysql-persistent-s2i.adoc[processserver64-mysql-persistent-s2i]
-* link:./processserver/processserver64-mysql-s2i.adoc[processserver64-mysql-s2i]
-* link:./processserver/processserver64-postgresql-persistent-s2i.adoc[processserver64-postgresql-persistent-s2i]
-* link:./processserver/processserver64-postgresql-s2i.adoc[processserver64-postgresql-s2i]
-
 == secrets
 
-* link:./secrets/processserver-app-secret.adoc[processserver-app-secret]
+
+== templates
+
+* link:./templates/processserver64-amq-mysql-persistent-s2i.adoc[processserver64-amq-mysql-persistent-s2i]
+* link:./templates/processserver64-amq-mysql-s2i.adoc[processserver64-amq-mysql-s2i]
+* link:./templates/processserver64-amq-postgresql-persistent-s2i.adoc[processserver64-amq-postgresql-persistent-s2i]
+* link:./templates/processserver64-amq-postgresql-s2i.adoc[processserver64-amq-postgresql-s2i]
+* link:./templates/processserver64-basic-s2i.adoc[processserver64-basic-s2i]
+* link:./templates/processserver64-externaldb-s2i.adoc[processserver64-externaldb-s2i]
+* link:./templates/processserver64-mysql-persistent-s2i.adoc[processserver64-mysql-persistent-s2i]
+* link:./templates/processserver64-mysql-s2i.adoc[processserver64-mysql-s2i]
+* link:./templates/processserver64-postgresql-persistent-s2i.adoc[processserver64-postgresql-persistent-s2i]
+* link:./templates/processserver64-postgresql-s2i.adoc[processserver64-postgresql-s2i]
 
 ////
   the source for the release notes part of this page is in the file
@@ -35,4 +36,7 @@ toc::[levels=1]
 ////
 
 == Release Notes
+
+=== Release 6.4.12
+* [CLOUD-2961] Move BxMS 6.x specific resources out of application-templates
 
