@@ -25,7 +25,11 @@ template_dirs = [ 'secrets', 'templates']
 amq_ssl_desc = None
 
 LINKS =  {
-          "jboss-processserver64-openshift:1.4": "../../processserver/processserver-openshift{outfilesuffix}[`jboss-processserver-6/processserver64-openshift`]",
+          "jboss-processserver64-openshift:1.0": "../../templates/processserver-openshift{outfilesuffix}[`jboss-processserver-6/processserver64-openshift`]",
+          "jboss-processserver64-openshift:1.1": "../../templates/processserver-openshift{outfilesuffix}[`jboss-processserver-6/processserver64-openshift`]",
+          "jboss-processserver64-openshift:1.2": "../../templates/processserver-openshift{outfilesuffix}[`jboss-processserver-6/processserver64-openshift`]",
+          "jboss-processserver64-openshift:1.3": "../../templates/processserver-openshift{outfilesuffix}[`jboss-processserver-6/processserver64-openshift`]",
+          "jboss-processserver64-openshift:1.4": "../../templates/processserver-openshift{outfilesuffix}[`jboss-processserver-6/processserver64-openshift`]",
 }
 
 PARAMETER_VALUES = {"APPLICATION_DOMAIN": "secure-app.test.router.default.local", \

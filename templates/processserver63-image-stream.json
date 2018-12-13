@@ -51,8 +51,8 @@
                         "annotations": {
                             "description": "Red Hat JBoss BPM Suite 6.3 intelligent process server S2I images.",
                             "iconClass": "icon-processserver",
-                            "tags": "builder,processserver,hidden",
-                            "supports": "processserver:6.3",
+                            "tags": "builder,processserver,java,hidden",
+                            "supports": "processserver:6.3,java:8",
                             "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "processserver/library",
                             "sampleRef": "1.3",
