@@ -1,0 +1,9 @@
+= Application Templates
+
+This directory contains OpenShift v3 application templates which support the Red Hat JBoss BRMS 6.4 Intelligent Process Server.
+Source can be found https://github.com/jboss-container-images/jboss-processserver-6-openshift-image/tree/6.4.11.x[here].
+
+:icons: font
+:toc: macro
+
+toc::[levels=1]
