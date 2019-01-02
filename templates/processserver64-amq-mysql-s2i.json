@@ -11,7 +11,8 @@
             "description": "An example BPM Suite application with A-MQ and a MySQL database. For more information about using this template, see https://github.com/jboss-openshift/application-templates.",
             "template.openshift.io/long-description": "This template defines resources needed to develop Red Hat Business Process Suite intelligent process server 6.4 based application, including a build configuration, application deployment configuration, Red Hat A-MQ for messaging broker, database deployment configuration for MySQL using ephemeral (temporary) storage and secure communication using https.",
             "template.openshift.io/documentation-url": "https://access.redhat.com/documentation/en/red-hat-jboss-bpm-suite/",
-            "template.openshift.io/support-url": "https://access.redhat.com"
+            "template.openshift.io/support-url": "https://access.redhat.com",
+            "template.openshift.io/bindable": "false"
         },
         "name": "processserver64-amq-mysql-s2i"
     },
@@ -329,6 +330,7 @@
             "required": false
         },
         {
+            "displayName": "List of directories from which archives will be copied into the deployment folder.",
             "description": "List of directories from which archives will be copied into the deployment folder. If unspecified, all archives in /target will be copied.",
             "name": "ARTIFACT_DIR",
             "value": "",
@@ -342,6 +344,7 @@
             "required": true
         },
         {
+            "displayName": "Container memory limit",
             "description": "Container memory limit",
             "name": "MEMORY_LIMIT",
             "value": "1Gi",
@@ -455,7 +458,8 @@
                 "ports": [
                     {
                         "name": "mesh",
-                        "port": 61616
+                        "port": 61616,
+                        "targetPort": 61616
                     }
                 ],
                 "selector": {
@@ -533,6 +537,9 @@
                 "name": "${APPLICATION_NAME}",
                 "labels": {
                     "application": "${APPLICATION_NAME}"
+                },
+                "annotations": {
+                    "template.alpha.openshift.io/wait-for-ready": "true"
                 }
             },
             "spec": {
@@ -604,7 +611,11 @@
             "metadata": {
                 "name": "${APPLICATION_NAME}",
                 "labels": {
-                    "application": "${APPLICATION_NAME}"
+                    "application": "${APPLICATION_NAME}",
+                    "service": "${APPLICATION_NAME}"
+                },
+                "annotations": {
+                    "template.alpha.openshift.io/wait-for-ready": "true"
                 }
             },
             "spec": {
@@ -838,7 +849,11 @@
             "metadata": {
                 "name": "${APPLICATION_NAME}-mysql",
                 "labels": {
-                    "application": "${APPLICATION_NAME}"
+                    "application": "${APPLICATION_NAME}",
+                    "service": "${APPLICATION_NAME}-mysql"
+                },
+                "annotations": {
+                    "template.alpha.openshift.io/wait-for-ready": "true"
                 }
             },
             "spec": {
@@ -964,7 +979,11 @@
             "metadata": {
                 "name": "${APPLICATION_NAME}-amq",
                 "labels": {
-                    "application": "${APPLICATION_NAME}"
+                    "application": "${APPLICATION_NAME}",
+                    "service": "${APPLICATION_NAME}-amq"
+                },
+                "annotations": {
+                    "template.alpha.openshift.io/wait-for-ready": "true"
                 }
             },
             "spec": {
