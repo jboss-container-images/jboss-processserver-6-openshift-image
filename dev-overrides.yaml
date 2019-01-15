@@ -1,0 +1,24 @@
+schema_version: 1
+
+modules:
+      repositories:
+          - name: cct_module
+            git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: sprint-28
+          - name: jboss-eap-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-modules.git
+                  ref: sprint-28
+          - name: jboss-eap-6-image
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-6-image.git
+                  ref: Sprint-28-1
+          - name: jboss-kieserver-6-openshift-image
+            git:
+                  url: https://github.com/jboss-container-images/jboss-kieserver-6-openshift-image.git
+                  ref: 6.4.x
+          - name: jboss-kie-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-kie-modules.git
+                  ref: master
