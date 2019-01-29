@@ -38,9 +38,6 @@ toc::[levels=1]
 
 == Release Notes
 
-=== Release 6.4.12
-* [CLOUD-2961] Move BxMS 6.x specific resources out of application-templates
-
 === Relese 1.4.17
 * RH-SSO 7.2 templates and related documentation for these templates were moved to dedicated link:https://github.com/jboss-container-images/redhat-sso-7-openshift-image[Red Hat Single Sign-On 7 OpenShift container images] repository
 

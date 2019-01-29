@@ -1,9 +1,9 @@
 schema_version: 1
 
 name: "jboss-processserver-6/processserver64-openshift"
+description: "JBoss BPMS Intelligent Process Server 6.4 for OpenShift"
 version: "1.4"
-description: "Platform for executing business rules on JBoss BPMS Intelligent Process Server 6.4."
-from: "jboss-kieserver-6/kieserver64-openshift:1.4"
+from: "rhel7:7-released"
 labels:
     - name: "com.redhat.component"
       value: "jboss-processserver-6-processserver64-openshift-container"
@@ -12,23 +12,49 @@ labels:
     - name: "io.k8s.display-name"
       value: "JBoss BPMS Intelligent Process Server 6.4"
     - name: "io.openshift.tags"
-      value: "builder,processserver,processserver6"
+      value: "builder,javaee,eap,eap6,processserver,processserver6"
 envs:
-    - name: "KIE_SERVER_BPM_UI_DISABLED"
-      value: "true"
-      description: "The BPM UI capability is disabled in this image."
-    - name: "KIE_SERVER_BRP_DISABLED"
-      value: "true"
-      description: "The BRP capability is disabled in this image."
     - name: "JBOSS_PRODUCT"
       value: "processserver"
     - name: "JBOSS_PROCESSSERVER_VERSION"
       value: "6.4.11.GA"
     - name: "PRODUCT_VERSION"
       value: "6.4.11.GA"
-run:
-      user: 185
+    - name: "KIE_SERVER_BPM_DISABLED"
+      value: "false"
+      description: "The BPM capability is enabled in this image."
+    - name: "KIE_SERVER_BPM_UI_DISABLED"
+      value: "true"
+      description: "The BPM UI capability is disabled in this image."
+    - name: "KIE_SERVER_BRM_DISABLED"
+      value: "false"
+      description: "The BRM capability is enabled in this image."
+    - name: "KIE_SERVER_BRP_DISABLED"
+      value: "true"
+      description: "The BRP capability is disabled in this image."
+modules:
+      repositories:
+          - name: cct_module
+            git:
+                  url: https://github.com/jboss-openshift/cct_module.git
+                  ref: master
+          - name: jboss-eap-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-modules.git
+                  ref: master
+          - name: jboss-eap-6-image
+            git:
+                  url: https://github.com/jboss-container-images/jboss-eap-6-image.git
+                  ref: eap64-dev
+          - name: jboss-kie-modules
+            git:
+                  url: https://github.com/jboss-container-images/jboss-kie-modules.git
+                  ref: master
+      install:
+          - name: jboss-kieserver-6
 osbs:
+      configuration:
+          container_file: container.yaml
       repository:
-            name: containers/jboss-processserver-6
-            branch: jb-processserver-6.4-openshift-rhel-7
+          name: containers/jboss-processserver-6
+          branch: jb-processserver-6.4-openshift-rhel-7
