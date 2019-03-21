@@ -7,7 +7,7 @@
 = Application Templates
 
 This directory contains OpenShift v3 application templates which support the Red Hat JBoss BRMS 6.4 Intelligent Process Server.
-Source can be found https://github.com/jboss-container-images/jboss-processserver-6-openshift-image/tree/6.4.11.x[here].
+Source can be found https://github.com/jboss-container-images/jboss-processserver-6-openshift-image/tree/6.4.x[here].
 
 :icons: font
 :toc: macro
@@ -146,7 +146,7 @@ toc::[levels=1]
  * Add ConfigChange trigger to DeploymentConfig in all templates
  * Set appropriate defaults so all templates can be instantiated as-is
  * Image names and tags have changed from product release to xPaaS release (e.g. jboss-eap-6/eap6-openshift:6.4 => jboss-eap-6/eap64-openshift:1.1)
- * ImageStream names have changed to include minor version in names (e.g. jboss-eap6-openshift => jboss-eap64-openshift) 
+ * ImageStream names have changed to include minor version in names (e.g. jboss-eap6-openshift => jboss-eap64-openshift)
  * Use Kubernetes to locate cluster nodes instead of DNS (e.g. KUBE_PING vs DNS_PING in JGroups configuration)
  * Add ConfigChange trigger to BuildConfig in all templates
  * Add forcePull=true to BuildConfig in all templates
@@ -166,5 +166,3 @@ toc::[levels=1]
 
 === Release 1.0.0
  * Initial release with support for JBoss EAP, JBoss Web Server, and JBoss A-MQ
-
-

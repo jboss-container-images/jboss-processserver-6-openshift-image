@@ -2,9 +2,15 @@ schema_version: 1
 
 name: "jboss-processserver-6/processserver64-openshift"
 description: "JBoss BPMS Intelligent Process Server 6.4 for OpenShift"
-version: "1.4"
+version: "1.5"
 from: "rhel7:7-released"
 labels:
+    - name: "org.jboss.product"
+      value: "processserver"
+    - name: "org.jboss.product.version"
+      value: "6.4.11.GA"
+    - name: "org.jboss.product.processserver.version"
+      value: "6.4.11.GA"
     - name: "com.redhat.component"
       value: "jboss-processserver-6-processserver64-openshift-container"
     - name: "io.k8s.description"
