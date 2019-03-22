@@ -1,5 +1,7 @@
 builds:
   # Product builds
-  - name: "jboss-processserver-6-openshift-dev"
+  - name: "jboss-processserver-6-openshift"
     descriptor: "image.yaml"
     product: true
+    overrides:
+      - "branch-overrides.yaml"
