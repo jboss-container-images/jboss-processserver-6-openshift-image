@@ -139,7 +139,7 @@
                             "supports": "processserver:6.4,java:8",
                             "sampleRepo": "https://github.com/jboss-openshift/openshift-quickstarts.git",
                             "sampleContextDir": "processserver/library",
-                            "sampleRef": "1.3",
+                            "sampleRef": "1.4",
                             "version": "1.5",
                             "openshift.io/display-name": "Red Hat JBoss BPM Suite 6.4 intelligent process server"
                         },
