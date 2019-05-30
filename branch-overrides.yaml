@@ -1,19 +1,24 @@
 schema_version: 1
 
+# Purpose: Branch overrides are for building the current state of the branch,
+#          along with other modules at specific reference points. Neither the
+#          branch nor the modules it references are guaranteed to be unchanging.
+#   Usage: cekit build --overrides-file branch-overrides.yaml
+
 modules:
       repositories:
           - name: cct_module
             git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: sprint-28
+                  ref: sprint-31
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
-                  ref: sprint-28
+                  ref: 6.4.22-2
           - name: jboss-eap-6-image
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-6-image.git
-                  ref: Sprint-28-1
+                  ref: EAP64_22_CR1
           - name: jboss-kieserver-6-openshift-image
             git:
                   url: https://github.com/jboss-container-images/jboss-kieserver-6-openshift-image.git

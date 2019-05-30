@@ -1,19 +1,25 @@
 schema_version: 1
 
+# Purpose: Tag overrides are for reliably rebuilding the image per the state of
+#          the branch at the time the tag was created, along with other modules
+#          at reliable and unchanging reference points. Useful for CVE respins.
+#          Warning: Only reliable if referenced via a tag itself!
+#   Usage: cekit build --overrides-file tag-overrides.yaml
+
 modules:
       repositories:
           - name: cct_module
             git:
                   url: https://github.com/jboss-openshift/cct_module.git
-                  ref: sprint-28
+                  ref: sprint-31
           - name: jboss-eap-modules
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-modules.git
-                  ref: sprint-28
+                  ref: 6.4.22-2
           - name: jboss-eap-6-image
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-6-image.git
-                  ref: Sprint-28-1
+                  ref: EAP64_22_CR1
           - name: jboss-kieserver-6-openshift-image
             git:
                   url: https://github.com/jboss-container-images/jboss-kieserver-6-openshift-image.git
