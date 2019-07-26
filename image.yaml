@@ -52,12 +52,13 @@ modules:
             git:
                   url: https://github.com/jboss-container-images/jboss-eap-6-image.git
                   ref: eap64-dev
-          - name: jboss-kie-modules
+          - name: jboss-kieserver-6-openshift-image
             git:
-                  url: https://github.com/jboss-container-images/jboss-kie-modules.git
-                  ref: master
+                  url: https://github.com/jboss-container-images/jboss-kieserver-6-openshift-image.git
+                  ref: 6.4.x
       install:
-          - name: jboss-kieserver-6
+          - name: jboss-kieserver
+            version: "6.4"
 packages:
       content_sets_file: content_sets.yml
 osbs:
