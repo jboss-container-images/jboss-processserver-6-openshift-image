@@ -23,8 +23,4 @@ modules:
           - name: jboss-kieserver-6-openshift-image
             git:
                   url: https://github.com/jboss-container-images/jboss-kieserver-6-openshift-image.git
-                  ref: rhpam-6.4.12.GA
-          - name: jboss-kie-modules
-            git:
-                  url: https://github.com/jboss-container-images/jboss-kie-modules.git
-                  ref: rhpam-6.4.12.GA
+                  ref: 6.4.12.GA
