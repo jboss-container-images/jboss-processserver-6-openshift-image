@@ -18,10 +18,10 @@
                     "openshift.io/display-name": "Red Hat JBoss BPM Suite 6.4 intelligent process server",
                     "openshift.io/provider-display-name": "Red Hat, Inc.",
                     "version": "1.4.17"
+                },
+                "labels": {
+                    "xpaas": "1.4.17"
                 }
-            },
-            "labels": {
-                "xpaas": "1.4.17"
             },
             "spec": {
                 "tags": [
